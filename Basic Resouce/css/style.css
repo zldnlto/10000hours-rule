@@ -1,0 +1,97 @@
+@import url("./reset.css");
+@import url("./10000hours.css");
+
+/* common */
+* {
+  font-family: "GmarketSansMedium";
+}
+body {
+  background-color: #5b2386;
+}
+.ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* HEADER */
+
+/* img에 가상요소 after 잘 안먹었는데 왜일까?*/
+
+.main-header {
+  position: relative;
+  height: 431px;
+  text-align: center;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  background-image: url("../img/clock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  width: 221.6px;
+  height: 225px;
+}
+
+.logo-img {
+  width: 564px;
+  height: 112px;
+  margin-top: 194px;
+}
+
+/* SUMMARY */
+
+.summary {
+  color: #fff;
+}
+
+.summary-wrapper {
+  text-align: center;
+}
+
+/* figma보다 굵게 나오는 느낌..*/
+.summary-quote {
+  font-family: "OTEnjoystoriesBA";
+  font-style: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #f5df4d;
+}
+
+.summary-item {
+  position: relative;
+  margin-top: 78px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.summary-item::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  display: block;
+  background-image: url("../img/quotes.png");
+  background-repeat: no-repeat;
+  width: 493px;
+  height: 96px;
+  z-index: -1;
+}
+
+.summary-item strong {
+  font-size: 24px;
+  font-weight: 800;
+}
