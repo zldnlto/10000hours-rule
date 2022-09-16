@@ -4,6 +4,7 @@
 /* common */
 * {
   font-family: "GmarketSansMedium";
+  color: #fff;
 }
 body {
   background-color: #5b2386;
@@ -21,6 +22,22 @@ body {
   width: 960px;
   margin: 0 auto;
   text-align: center;
+}
+
+/* btn 공통 스타일로 */
+
+.btn {
+  display: inline-block;
+  color: #5b2386;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  padding: 21px 49px;
+  border-radius: 56px;
+  background-color: #fcee21;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
 }
 
 /* HEADER */
@@ -54,10 +71,6 @@ body {
 }
 
 /* SUMMARY */
-
-.summary {
-  color: #fff;
-}
 
 .summary-wrapper {
   text-align: center;
@@ -94,4 +107,106 @@ body {
 .summary-item strong {
   font-size: 24px;
   font-weight: 800;
+}
+
+/* CALCULATION */
+
+.calculation {
+  font-size: 24px;
+}
+
+.calcu-wrapper {
+  position: relative;
+  margin-top: 102px;
+}
+
+.input-wrapper input {
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  width: 228px;
+  height: 57px;
+  border-radius: 7px;
+  border: none;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.input-wrapper input:first-child {
+  margin-bottom: 27px;
+}
+
+.input-wrapper input[placeholder] {
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+}
+
+.calcu {
+  margin-top: 115px;
+  position: relative;
+}
+
+.btn-calcu ::after {
+  position: absolute;
+}
+
+/* RESULT */
+
+.result {
+  margin-top: 147px;
+}
+/* 
+.result span {
+  padding-top: 24px;
+  padding-bottom: 24px;
+} */
+/* .result-box {
+  margin: 0 auto;
+  width: 663px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+} */
+
+.result-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result strong {
+  font-size: 72px;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: 700;
+}
+
+/* btn-result 네이밍바꿀까>>  */
+.btn-result {
+  margin-top: 127px;
+}
+
+.share {
+  color: #5b2386;
+  background-color: #fff;
+  margin-left: 18px;
+}
+
+/* FOOTER */
+
+#footer {
+  margin-top: 130px;
+  height: 150px;
+  text-align: center;
+}
+
+#footer small {
+  margin-top: 20px;
+  display: block;
+  font-size: 12px;
+  line-height: 17.38px;
 }

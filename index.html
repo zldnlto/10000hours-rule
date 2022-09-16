@@ -33,40 +33,54 @@
           </div>
         </section>
         <section class="calculation">
-          <h2 class="ir">1만 시간의 법칙 계산해보기</h2>
-          <section>
-            <h3>입력 칸</h3>
-            <div class="input-wrapper">
-              나는
-              <input type="text" />
-              전문가가 될 것이다. <br />
-              그래서 앞으로 매일 하루에 <input type="text" /> 시간씩 훈련할
-              것이다.
-            </div>
-            <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-          </section>
-          <section>
-            <h3>결과</h3>
-            당신은
-            <div>input value</div>
-            가 되기 위해서 <br />
-            대략
-            <div>result value</div>
-            일 이상 훈련하셔야 합니다! :)
-            <div>
-              <a href="#">훈련하러 가기 GO!GO!</a>
-              <button>공유하기</button>
-            </div>
-          </section>
+          <div class="calcu-wrapper">
+            <h2 class="ir">1만 시간의 법칙 계산해보기</h2>
+            <section>
+              <h3 class="ir">입력란</h3>
+              <div class="input-wrapper">
+                나는
+                <input type="text" placeholder="예)프로그래밍" />
+                전문가가 될 것이다. <br />
+                그래서 앞으로 매일 하루에
+                <input type="text" placeholder="예)5시간" /> 시간씩 훈련할
+                것이다.
+              </div>
+              <button class="btn calcu">
+                나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+              </button>
+            </section>
+            <section class="result">
+              <h3 class="ir">결과</h3>
+              <div class="result-box">
+                <span class="result-line">
+                  당신은
+                  <strong>프로그래밍</strong>
+                  전문가가 되기 위해서 <br />
+                </span>
+                <span class="result-line">
+                  대략
+                  <strong>5110</strong>
+                  일 이상 훈련하셔야 합니다! :)
+                </span>
+              </div>
+              <div class="btn-result">
+                <button class="btn go">훈련하러 가기 GO!GO!</button>
+                <button class="btn share">공유하기</button>
+              </div>
+            </section>
+          </div>
         </section>
       </main>
-      <footer>
-        <h2>회사 정보 및 저작권에 대한 안내</h2>
-        <img src="/Basic Resouce/img/logo.png" alt="주식회사 위니브 로고" />
-        <p class="copyright">
-          본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br />
-          수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
-        </p>
+      <footer id="footer">
+        <div class="footer-wrapper">
+          <h2 class="ir">회사 정보 및 저작권에 대한 안내</h2>
+          <img src="/Basic Resouce/img/logo.png" alt="주식회사 위니브 로고" />
+          <small>
+            ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에
+            있습니다.<br />
+            수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
+          </small>
+        </div>
       </footer>
       <div class="modal">모달창</div>
     </div>
