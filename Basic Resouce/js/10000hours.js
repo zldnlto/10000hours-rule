@@ -3,6 +3,7 @@
 const goBtn = document.querySelector(".go");
 const closeBtn = document.querySelector(".close");
 const modal = document.querySelector("#modal");
+const body = document.querySelector("body");
 
 const HIDDEN_NAME = "hidden";
 
@@ -15,4 +16,5 @@ function onGoBtnClick(event) {
 
 function onCloseBtnClick(event) {
   modal.classList.add(HIDDEN_NAME);
+  body.style.background = "#5b2386";
 }

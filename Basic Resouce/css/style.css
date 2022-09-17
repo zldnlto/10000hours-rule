@@ -6,23 +6,20 @@
   font-family: "GmarketSansMedium";
   color: inherit;
   box-sizing: border-box;
+  text-decoration: none;
 }
 body {
   background-color: #5b2386;
   width: 100%;
   height: 100vh;
 }
+
 .ir {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-  overflow: hidden;
-}
-
-.hidden {
-  display: none;
   overflow: hidden;
 }
 
@@ -54,7 +51,7 @@ body {
 
 /* img에 가상요소 after 잘 안먹었는데 왜일까?*/
 
-.main-header {
+#header {
   position: relative;
   height: 431px;
   text-align: center;
@@ -227,24 +224,34 @@ input:focus {
 /* MODAL */
 
 #modal {
+  width: 800px;
+  height: 800px;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  width: 800px;
-  height: 800px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px;
+  /* transition: all 0.2s linear; */
+
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
 }
 
 .modal-wrapper {
-  width: 100%;
+  width: 800px;
+  height: 800px;
   margin: 0 auto;
   text-align: center;
   padding: 76px 0 68px 0;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .modal-txt {
@@ -265,6 +272,41 @@ input:focus {
 }
 
 .close {
+  animation-name: fadeOut;
   margin-top: 74px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+  animation-name: fadeOut;
+}
+
+/* MODAL - animation */
+
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
