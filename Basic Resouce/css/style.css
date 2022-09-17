@@ -4,7 +4,8 @@
 /* common */
 * {
   font-family: "GmarketSansMedium";
-  color: #fff;
+  color: inherit;
+  box-sizing: border-box;
 }
 body {
   background-color: #5b2386;
@@ -22,6 +23,7 @@ body {
   width: 960px;
   margin: 0 auto;
   text-align: center;
+  color: #fff;
 }
 
 /* btn 공통 스타일로 */
@@ -140,17 +142,32 @@ body {
   color: #000;
 }
 
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 input:focus {
   outline: none;
 }
 
 .calcu {
-  margin-top: 115px;
   position: relative;
+  margin-top: 115px;
 }
 
-.btn-calcu ::after {
+.calcu::after {
+  content: "";
+  display: block;
   position: absolute;
+  bottom: -20px;
+  right: -65px;
+  background-image: url(../img/click.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 64px;
+  height: 72px;
+  cursor: default;
 }
 
 /* RESULT */
@@ -186,6 +203,7 @@ input:focus {
 }
 
 /* btn-result 네이밍바꿀까>>  */
+
 .btn-result {
   margin-top: 127px;
 }
@@ -209,4 +227,43 @@ input:focus {
   display: block;
   font-size: 12px;
   line-height: 17.38px;
+}
+
+/* 모달창 */
+.modal {
+  width: 800px;
+  height: 800px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.modal-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 76px 0 68px 0;
+}
+
+.modal-txt {
+  font-family: "OTEnjoystoriesBA";
+  color: #5b2386;
+  font-weight: 700;
+  margin-bottom: 29px;
+}
+
+.modal-txt h2 {
+  font-size: 72px;
+  line-height: 106px;
+}
+
+.modal-txt p {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.close {
+  margin-top: 74px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
