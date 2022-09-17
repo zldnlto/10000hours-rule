@@ -16,5 +16,5 @@ function onGoBtnClick(event) {
 
 function onCloseBtnClick(event) {
   modal.classList.add(HIDDEN_NAME);
-  body.style.background = "#5b2386";
+  event.preventDefault();
 }
