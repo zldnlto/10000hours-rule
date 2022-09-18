@@ -3,7 +3,6 @@
 const goBtn = document.querySelector(".go");
 const closeBtn = document.querySelector(".close");
 const modal = document.querySelector("#modal");
-const body = document.querySelector("body");
 
 const HIDDEN_NAME = "hidden";
 

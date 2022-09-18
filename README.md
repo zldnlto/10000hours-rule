@@ -5,9 +5,12 @@ https://www.figma.com/file/YIoHn24LhFrCBEedo96rx6/1%EB%A7%8C-%EC%8B%9C%EA%B0%84%
 ✔ 추가로 해볼 것
 
 [] 모달창 웹 접근성 고려해보기  
-[] setTimeout으로 일정 시간 지난 후 모달창 내려가게 하기
+[] setTimeout으로 일정 시간 지난 후 모달창 내려가게 하기 + 웹 페이지 이동?
 
 Feedback
 
 - 깃모지 컨벤션 정립
 - animation 공부
+
+CSS 코딩 컨벤션 적용 : mozila 에서 제안한 css 속성 기술 순서 바탕으로  
+ 위치선정 -> 윤곽 -> 외곽 디테일 -> 채색 -> 타이포그래피 -> 애니메이션 순

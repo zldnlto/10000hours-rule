@@ -2,54 +2,53 @@
 @import url("./10000hours.css");
 
 /* common */
+
 * {
+  box-sizing: border-box;
   font-family: "GmarketSansMedium";
   color: inherit;
-  box-sizing: border-box;
   text-decoration: none;
 }
 body {
-  background-color: #5b2386;
   width: 100%;
   height: 100vh;
+  background-color: #5b2386;
 }
 
 .ir {
   position: absolute;
+  overflow: hidden;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-  overflow: hidden;
 }
 
 .wrapper {
   position: relative;
   width: 960px;
   margin: 0 auto;
-  text-align: center;
   color: #fff;
+  text-align: center;
 }
 
 /* btn 공통 스타일로 */
 
 .btn {
   display: inline-block;
-  color: #5b2386;
-  text-align: center;
-  font-size: 24px;
-  line-height: 1;
   padding: 21px 49px;
+  border: none;
   border-radius: 56px;
   background-color: #fcee21;
-  cursor: pointer;
+  font-size: 24px;
   font-weight: 700;
-  border: none;
+  line-height: 1;
+  color: #5b2386;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* HEADER */
-
-/* img에 가상요소 after 잘 안먹었는데 왜일까?*/
 
 #header {
   position: relative;
@@ -63,12 +62,12 @@ body {
   position: absolute;
   bottom: 20%;
   left: 40%;
-  background-image: url("../img/clock.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   z-index: -1;
   width: 221.6px;
   height: 225px;
+  background-image: url("../img/clock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo-img {
@@ -88,8 +87,8 @@ body {
   font-family: "OTEnjoystoriesBA";
   font-style: normal;
   font-size: 36px;
-  line-height: 40px;
   color: #f5df4d;
+  line-height: 40px;
 }
 
 .summary-item {
@@ -98,17 +97,18 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
+
 .summary-item::after {
   content: "";
+  display: block;
   position: absolute;
   top: 20%;
   left: 25%;
-  display: block;
-  background-image: url("../img/quotes.png");
-  background-repeat: no-repeat;
+  z-index: -1;
   width: 493px;
   height: 96px;
-  z-index: -1;
+  background-image: url("../img/quotes.png");
+  background-repeat: no-repeat;
 }
 
 .summary-item strong {
@@ -128,15 +128,15 @@ body {
 }
 
 .input-wrapper input {
+  width: 228px;
+  height: 57px;
+  margin-left: 17px;
+  margin-right: 17px;
+  border: none;
+  border-radius: 7px;
   color: #000;
   font-size: 24px;
   text-align: center;
-  width: 228px;
-  height: 57px;
-  border-radius: 7px;
-  border: none;
-  margin-left: 17px;
-  margin-right: 17px;
 }
 
 .input-wrapper input:first-child {
@@ -167,11 +167,11 @@ input:focus {
   position: absolute;
   bottom: -20px;
   right: -65px;
+  width: 64px;
+  height: 72px;
   background-image: url(../img/click.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 64px;
-  height: 72px;
   cursor: default;
 }
 
@@ -188,9 +188,9 @@ input:focus {
 }
 
 .result strong {
-  font-size: 72px;
   margin-left: 12px;
   margin-right: 12px;
+  font-size: 72px;
   font-weight: 700;
 }
 
@@ -201,22 +201,22 @@ input:focus {
 }
 
 .share {
-  color: #5b2386;
-  background-color: #fff;
   margin-left: 18px;
+  background-color: #fff;
+  color: #5b2386;
 }
 
 /* FOOTER */
 
 #footer {
-  margin-top: 130px;
   height: 150px;
+  margin-top: 130px;
   text-align: center;
 }
 
 #footer small {
-  margin-top: 20px;
   display: block;
+  margin-top: 20px;
   font-size: 12px;
   line-height: 17.38px;
 }
@@ -224,19 +224,17 @@ input:focus {
 /* MODAL */
 
 #modal {
-  width: 800px;
-  height: 800px;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 800px;
+  height: 800px;
   margin: auto;
   background-color: transparent;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px;
-  /* transition: all 0.2s linear; */
-
   animation-duration: 0.25s;
   animation-timing-function: ease-out;
   animation-name: fadeIn;
@@ -247,11 +245,11 @@ input:focus {
   width: 800px;
   height: 800px;
   margin: 0 auto;
-  text-align: center;
   padding: 76px 0 68px 0;
   border-radius: 30px;
   background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .modal-txt {
@@ -272,27 +270,15 @@ input:focus {
 }
 
 .close {
-  animation-name: fadeOut;
   margin-top: 74px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hidden {
   display: none;
-  overflow: hidden;
-  animation-name: fadeOut;
 }
 
 /* MODAL - animation */
-
-@keyframes modal-bg-show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes fadeIn {
   from {
@@ -300,13 +286,5 @@ input:focus {
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
