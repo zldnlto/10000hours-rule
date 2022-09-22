@@ -272,6 +272,7 @@ input:focus {
 .close {
   margin-top: 74px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: "GmarketSansMedium";
 }
 
 .hidden {
